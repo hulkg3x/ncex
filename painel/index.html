@@ -47,8 +47,20 @@
     <header id="header">
         <div class="container">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-md-8">
                     <img class="img-fluid img-topo" src="../img/ncex_logo.png" alt="Logo NCEx Painel">
+                </div>
+                <div class="col-md-2">
+                    <div class="dropdown create">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expandes="true">
+                            Opções do cliente
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a onclick="carregar('pages/duvidas.html')" type="button" data-toggle="modal" data-target="#" href="#">Esclarecimento de Duvidas</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-2">
                     <div class="dropdown create">
@@ -83,7 +95,7 @@
                         <a href="index.html" class="list-group-item active main-color-bg">
                             <span class="glyphicon glyphicon-cog" aria-hidden="true"> Painel NCEx</span>
                         </a>
-                        <a onclick="carregar('pages/teste.html')" href="#" class="list-group-item">
+                        <a onclick="carregar('pages/protocolos.html')" href="#" class="list-group-item">
                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Pesquisar Protocolo</span>
                         </a>
                         <a href="post.html" class="list-group-item">
@@ -145,7 +157,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Deslogar</button>
+                        <button id="btn-logout" type="button" class="btn btn-primary">Deslogar</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -161,6 +173,7 @@
 
     <!-- Bootstrap and jQuery -->
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/logout.js"></script>
     <script>
         function carregar(pagina) {
             $("#conteudo").load(pagina);
