@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <title>NCEx</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img class="img-top" src="img/ncex_logo.png" alt="logo do site">
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <p class="error">
+                <div id="loader"></div>
+            </p>
+            <div class="login-painel">
+                <h1>Painel de usuário</h1>
+                <form action="page/painel.html" method="POST" id="paienlusuario">
+                    <p class="camp-login">
+                        <label for="login">Login : </label>
+                        <input type="text" id="login" name="login" placeholder="Digite seu login">
+                    </p>
+                    <p class="camp-pass">
+                        <label for="senha">Senha : </label>
+                        <input type="password" id="senha" name="Senha" placeholder="Digite sua senha">
+                    </p>
+                    <input type="submit" name="Login" value="Logar">
+                </form>
+
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; Copyright 2019
+    </footer>
+    <script src="js/logar.js"></script>
+</body>
+
+</html>

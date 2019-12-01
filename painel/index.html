@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/painel.css" rel="stylesheet">
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+    <title>Painel | NCEx</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Painel NCEx</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Contraste</a></li>
+                    <li><a href="#">Zoom [+]</a></li>
+                    <li><a href="#">Zoom [-]</a></li>
+                    <li><a href="#contact">Guia de Pagina</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">Bem Vindo, Joel</a></li>
+                    <li><a type="button" data-toggle="modal" data-target="#logout" href="">Sair</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <!-- header site -->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <img class="img-fluid img-topo" src="../img/ncex_logo.png" alt="Logo NCEx Painel">
+                </div>
+                <div class="col-md-2">
+                    <div class="dropdown create">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expandes="true">
+                            Contact Center
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a type="button" data-toggle="modal" data-target="#" href="#">Add page</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="active">DashBoard</li>
+            </ol>
+        </div>
+    </section>
+    <!-- painel esquerda -->
+
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="index.html" class="list-group-item active main-color-bg">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"> Painel NCEx</span>
+                        </a>
+                        <a href="pages.html" class="list-group-item">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Pesquisar Protocolo</span>
+                        </a>
+                        <a href="post.html" class="list-group-item">
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"> Editar Cliente</span>
+                        </a>
+                    </div>
+                    <div class="well">
+                        <h4>Aqui o titulo</h4>
+                        <h1>Aqui conteudo!!!</h1>
+                        <p>Tem que por oque aqui abia</p>
+                    </div>
+                </div>
+                <!-- Painel direito -->
+                <div class="col-md-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Home</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h1>Aqui fica o conteudo inicial</h1>
+                        </div>
+                    </div>
+                    <!-- OUTRO PAINEL SE PRECISAR -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="title-panel">Outro conteudo se precisar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-striped table-hover">
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Joined!</th>
+                                </tr>
+                                <tr>
+                                    <td>Joel</td>
+                                    <td>joel.a.rocha@hotmail.com</td>
+                                    <td>Yes!</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal Exit -->
+        <div class="modal fade" id="logout" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Sair do Painel NCEx</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tem Certeza que deseja sair do Painel?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Deslogar</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </section>
+    <footer id="footer">
+        <p>&copy; NCEx Copyright 2019</p>
+    </footer>
+
+
+
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>

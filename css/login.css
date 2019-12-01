@@ -1,0 +1,176 @@
+/* Body : Estilo relacionado ao corpo da Pagina */
+body {
+    background-color: #6E6E6E;
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+}
+/* logo e logo-titulo : Relacionado a parte de cima da pagina o titulo */
+.img-top {
+    width: 20%;
+    display: block;
+    margin: auto;
+}
+/* login-painel : Relacionado a parte base do login */
+.login-painel {
+    background-color:#ffffff;
+    border-radius: 10px;
+    margin: auto;
+    color: black;
+    width: 30%;
+    height: 200px;
+    padding-bottom: 50px;
+    display: block;
+    transition: 1s;
+    box-shadow: 1px 1px 5px #6E6E6E;
+}
+.login-painel {
+    text-align: center;
+}
+.login-painel h1 {
+    font-size: 30px;
+    color: #009e73;
+    padding-top: 20px;
+}
+.login-painel p {
+    color: #009e73;
+    font-weight: bold;
+}
+.login-painel:hover {
+    box-shadow: 0 0 15px #6E6E6E;
+}
+/* Abaixo relacionado a parte de login e campos input */
+
+.camp-login, .camp-pass {
+    padding: 5px;
+}
+input[type=text] {
+    padding: 10px;
+    border: 1px solid #009e73;
+    border-radius: 5px;
+    outline: none;
+}
+input[type=text]:hover {
+    border: 1px solid aquamarine;
+}
+input[type=password] {
+    padding: 10px;
+    border-radius: 5px;
+    border:none;
+    border: 1px solid #009e73;
+    outline: none;
+}
+input[type=password]:hover {
+    border: 1px solid aquamarine;
+}
+textarea {
+    color: aquamarine;
+}
+textarea:hover {
+    border: 1px solid aquamarine;
+}
+input[type=submit]{
+    background-color: #009e7351;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    color: #009e73;
+    border-radius: 5px;
+    font-size: 20px;
+}
+input[type=submit]:hover {
+    color: whitesmoke;
+    background-color: #009e73;
+}
+
+/* error de login estilo */
+
+.error {
+    border: 1px solid rosybrown;
+    width: 20%;
+    text-align: center;
+    margin: 50px auto;
+    background-color: salmon;
+    border-radius: 5px;
+    font-size: 14px;
+    color: whitesmoke;
+    opacity: 0;
+    transition: 0.5s;
+}
+.errorFadeIn {
+    border: 1px solid rosybrown;
+    width: 20%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 50px auto;
+    background-color: salmon;
+    border-radius: 5px;
+    font-size: 14px;
+    color: whitesmoke;
+    opacity: 1;
+    transition: 0.5s;
+}
+.logadoComSucesso {
+    width: 20%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 50px auto;
+    background-color: #bbeebb;
+    border-radius: 5px;
+    font-size: 14px;
+    color: whitesmoke;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+/* Tela de loading */
+
+/* Center the loader */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  /* footer */
+  footer {
+      padding-top: 20px;
+      font-weight: bold;
+      text-align: center;
+  }
