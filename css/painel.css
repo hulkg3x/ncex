@@ -192,4 +192,7 @@ body {
   cursor: no-drop;
   display: block;
 }
+.fixarposicao {
+  position: fixed;
+}
 
