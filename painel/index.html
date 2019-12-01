@@ -58,7 +58,8 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a onclick="carregar('pages/duvidas.html')" type="button" data-toggle="modal" data-target="#" href="#">Esclarecimento de Duvidas</a></li>
+                            <li><a onclick="carregar('pages/duvidas.html')" type="button" data-toggle="modal"
+                                    data-target="#" href="#">Esclarecimento de Duvidas</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,11 +67,13 @@
                     <div class="dropdown create">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
                             data-toggle="dropdown" aria-haspopup="true" aria-expandes="true">
-                            Contact Center
+                            Opções do Contact
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a type="button" data-toggle="modal" data-target="#" href="#">Add page</a></li>
+                            <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-liberar">Liberar</a></li>
+                            <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-pausar">Pausar</a></li>
+                            <li><a type="button" data-toggle="modal" data-target="#" href="#">Finalizar Serviço</a></li>
                         </ul>
                     </div>
                 </div>
@@ -103,9 +106,17 @@
                         </a>
                     </div>
                     <div class="well">
-                        <h4>Aqui o titulo</h4>
-                        <h1>Aqui conteudo!!!</h1>
-                        <p>Tem que por oque aqui abia</p>
+                        <h4>Contact Center</h4>
+                        <div class="atendimento">
+                            <p id="statusService">Finalizando</p>
+                            <p id="timeService">00:00</p>
+                            <button class="btn btn-default btn-atender" type="button" title="Atender" id="btn-atenderCliente">
+                                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                            </button>
+                            <button class="btn btn-default btn-atender" type="button" title="Desligar" id="btn-desligarCliente">
+                                <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <!-- Painel direito -->
@@ -174,6 +185,7 @@
     <!-- Bootstrap and jQuery -->
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/logout.js"></script>
+    <script src="../js/call.js"></script>
     <script>
         function carregar(pagina) {
             $("#conteudo").load(pagina);

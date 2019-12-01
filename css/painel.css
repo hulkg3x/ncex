@@ -128,3 +128,68 @@ body {
     width: 100%;
     margin-top: 30px;
 }
+
+
+.atendimento {
+  padding: 20px;
+  background-color: #262427;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+.atendimentoOncliente {
+  background: linear-gradient(45deg, #179D00, #B1FFA4);
+  
+}
+.btn-atender {
+  padding: 5px 25px;
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+/* Animação de atendimento */
+@-webkit-keyframes glowing {
+  0% { background-color: #35b084; -webkit-box-shadow: 0 0 3px #35b084; }
+  50% { background-color: #8BC34A; -webkit-box-shadow: 0 0 3px #8BC34A; }
+  100% { background-color: #35b084; -webkit-box-shadow: 0 0 3px #35b084; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #35b084; -moz-box-shadow: 0 0 3px #35b084; }
+  50% { background-color: #8BC34A; -moz-box-shadow: 0 0 3px #8BC34A; }
+  100% { background-color: #35b084; -moz-box-shadow: 0 0 3px #35b084; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #35b084; box-shadow: 0 0 3px #35b084; }
+  50% { background-color: #8BC34A; box-shadow: 0 0 3px #8BC34A; }
+  100% { background-color: #35b084; box-shadow: 0 0 3px #35b084; }
+}
+
+@keyframes glowing {
+  0% { background-color: #35b084; box-shadow: 0 0 3px #35b084; }
+  50% { background-color: #8BC34A; box-shadow: 0 0 3px #8BC34A; }
+  100% { background-color: #35b084; box-shadow: 0 0 3px #35b084; }
+}
+
+.btn-atendimento-on {
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+.btn-delisgar-Cliente-off {
+  background-color: crimson;
+}
+.btn-delisgar-Cliente-off:hover {
+  background-color: #FF5757;
+}
+
+.linkDisabled {
+  color: #cccccc;
+  background: #e7e7e7;
+  cursor: no-drop;
+  display: block;
+}
+
