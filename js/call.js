@@ -90,7 +90,7 @@ function FinalizarLigacao() {
     callOn.classList.remove('atendimentoOncliente');
     btnAtender.disabled = false;
     timeService.innerHTML = "00:00";
-    StartTime(false);
+    StopTime();
 }
 
 
@@ -112,4 +112,7 @@ function StartTime(timeStart) {
             }
         }, 1000);
     }
+}
+function StopTime(){
+    clearInterval();
 }

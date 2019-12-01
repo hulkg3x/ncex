@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .formSelect {
+            display: none;
+        }
+
+        .visibilityForm {
+            display: block;
+        }
+
+        .form-group {
+            padding: 10px;
+        }
+
+        .selectManchine {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>
+                        Protocolo Gerado : "2019123456789"
+                        <a type="button" id="btn-enviarprotocol" class="btn btn-default" title="Enviar via SMS">Enviar
+                            Protocolo</a>
+                    </h3>
+                </div>
+            </div>
+            <h1>Cliente</h1>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="nomeCliente">Nome:</label>
+                    <input type="text" class="form-control" id="nomeCliente" placeholder="Digite nome do cliente">
+                </div>
+                <div class="form-group">
+                    <label for="telefoneCliente">Telefone:</label>
+                    <input type="text" class="form-control" id="telefoneCliente" placeholder="Digite o telefone">
+                </div>
+                <h3>Endereço</h3>
+                <div class="form-group">
+                    <label for="cidadeCliente">Cep:</label>
+                    <input type="text" class="form-control" id="cidadeCliente" placeholder="Ex: 00000-000">
+                </div>
+                <div class="form-group">
+                    <label for="cidadeCliente">Cidade:</label>
+                    <input type="text" class="form-control" id="cidadeCliente" placeholder="Ex: Uberlandia">
+                </div>
+                <div class="form-group">
+                    <label for="cidadeCliente">Estado:</label>
+                    <select class="form-control">
+                        <option>SP</option>
+                        <option>MG</option>
+                        <option>SS</option>
+                        <option>SP</option>
+                        <option>SP</option>
+                        <option>SP</option>
+                        <option>SP</option>
+                        <option>SP</option>
+                        <option>SP</option>
+                        <option>SP</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cidadeCliente">Endereço :</label>
+                    <input type="text" class="form-control" id="cidadeCliente" placeholder="Ex: Rua ...">
+                </div>
+                <h3>Descrição do cliente</h3>
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" cols="50"
+                        placeholder="Digite informação do cliente"></textarea>
+                </div>
+            </form>
+            <button class="btn btn-primary" type="button">Salvar</button>
+            <form>
+                <h3>Serviços</h3>
+                <div class="form-group">
+                    <label for="cidadeCliente">Produtos:</label>
+                    <select class="form-control" id="optionSelect" onclick="OptionSelect()">
+                        <option>SELECIONE UM PRODUTO</option>
+                        <option value="openPrensa">Prenssa termica LMI-A3</option>
+                        <option value="maginMachine">Magic Manchine</option>
+                        <option>Carro</option>
+                    </select>
+                </div>
+
+                <div class="form-group formSelect">
+                    <label for="prensa">Prenssa</label>
+                    <input type="text" class="form-control" id="prensa" placeholder="Prensa">
+                </div>
+                <div class="form-group selectManchine">
+                    <label for="maginMachine">Manchine</label>
+                    <input type="text" class="form-control" id="maginMachine" placeholder="maginMachine">
+                </div>
+            </form>
+
+
+            <button class="btn btn-primary" type="button">
+                Confirmar
+            </button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function carregar(pagina) {
+            $("#conteudo").load(pagina);
+        }
+    </script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/painel.js"></script>
+</body>
+</body>
+
+</html>

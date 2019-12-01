@@ -71,8 +71,10 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-liberar">Liberar</a></li>
-                            <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-pausar">Pausar</a></li>
+                            <li><a type="button" data-toggle="modal" data-target="#" href="#"
+                                    id="btn-liberar">Liberar</a></li>
+                            <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-pausar">Pausar</a>
+                            </li>
                             <li><a type="button" data-toggle="modal" data-target="#" href="#">Finalizar Serviço</a></li>
                         </ul>
                     </div>
@@ -95,7 +97,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="index.html" class="list-group-item active main-color-bg">
+                        <a onclick="carregar('pages/home.html')" href="#" class="list-group-item active main-color-bg">
                             <span class="glyphicon glyphicon-cog" aria-hidden="true"> Painel NCEx</span>
                         </a>
                         <a onclick="carregar('pages/protocolos.html')" href="#" class="list-group-item">
@@ -110,10 +112,12 @@
                         <div class="atendimento">
                             <p id="statusService">Finalizando</p>
                             <p id="timeService">00:00</p>
-                            <button class="btn btn-default btn-atender" type="button" title="Atender" id="btn-atenderCliente">
+                            <button class="btn btn-default btn-atender" type="button" title="Atender"
+                                id="btn-atenderCliente" onclick="carregar('pages/cliente.html')">
                                 <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
                             </button>
-                            <button class="btn btn-default btn-atender" type="button" title="Desligar" id="btn-desligarCliente">
+                            <button class="btn btn-default btn-atender" type="button" title="Desligar"
+                                id="btn-desligarCliente">
                                 <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
                             </button>
                         </div>
@@ -126,7 +130,10 @@
                             <h3 class="panel-title">Home</h3>
                         </div>
                         <div class="panel-body">
-                            <h1>Aqui fica o conteudo inicial</h1>
+                            <h3><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Dicas :</h3>
+                            <p class="">Não esqueça sempre de verificar com o cliente suas duvidas</p>
+                            <p class="">Nunca deixe seu cliente com duvidas</p>
+                            <p class="">Sempre passe o numero de</p>
                         </div>
                     </div>
                     <!-- OUTRO PAINEL SE PRECISAR -->
@@ -183,14 +190,15 @@
 
 
     <!-- Bootstrap and jQuery -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/logout.js"></script>
-    <script src="../js/call.js"></script>
     <script>
         function carregar(pagina) {
             $("#conteudo").load(pagina);
         }
     </script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/call.js"></script>
+
 </body>
 
 </html>
