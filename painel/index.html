@@ -8,6 +8,8 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/painel.css" rel="stylesheet">
     <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Painel | NCEx</title>
 </head>
 
@@ -81,7 +83,7 @@
                         <a href="index.html" class="list-group-item active main-color-bg">
                             <span class="glyphicon glyphicon-cog" aria-hidden="true"> Painel NCEx</span>
                         </a>
-                        <a href="pages.html" class="list-group-item">
+                        <a onclick="carregar('pages/teste.html')" href="#" class="list-group-item">
                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Pesquisar Protocolo</span>
                         </a>
                         <a href="post.html" class="list-group-item">
@@ -105,7 +107,7 @@
                         </div>
                     </div>
                     <!-- OUTRO PAINEL SE PRECISAR -->
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" id="conteudo">
                         <div class="panel-heading">
                             <h3 class="title-panel">Outro conteudo se precisar</h3>
                         </div>
@@ -158,9 +160,12 @@
 
 
     <!-- Bootstrap and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script>
+        function carregar(pagina) {
+            $("#conteudo").load(pagina);
+        }
+    </script>
 </body>
 
 </html>
