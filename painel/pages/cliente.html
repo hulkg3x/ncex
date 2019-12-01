@@ -43,6 +43,25 @@
                     </h3>
                 </div>
             </div>
+            <form>
+                <div class="form-group">
+                    <h4>Tipo de problemas</h4>
+                    <select class="form-control" required>
+                        <option>SELECIONE UMA OPÇÃO</option>
+                        <option>Produto com defeito</option>
+                        <option>Endereço de assistencia tecnica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <h4>Produto</h4>
+                    <select class="form-control">
+                        <option>SELECIONE UMA OPÇÃO</option>
+                        <option>Magic Manchine</option>
+                        <option>Prenssa termica LMI-A3</option>
+                        <option>Mondens</option>
+                    </select>
+                </div>
+            </form>
             <h1>Cliente</h1>
             <form class="form-inline">
                 <div class="form-group">
@@ -87,37 +106,67 @@
                         placeholder="Digite informação do cliente"></textarea>
                 </div>
             </form>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="checkAssistencia" value="opt1">
+                    Precisa de assistencia
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="checkAssistencia" value="opt2">
+                    Não Precisa de assistencia
+                </label>
+            </div>
             <button class="btn btn-primary" type="button">Salvar</button>
             <form>
-                <h3>Serviços</h3>
+                <h3>Guia de produtos e serviços</h3>
                 <div class="form-group">
                     <label for="cidadeCliente">Produtos:</label>
                     <select class="form-control" id="optionSelect" onclick="OptionSelect()">
                         <option>SELECIONE UM PRODUTO</option>
-                        <option value="openPrensa">Prenssa termica LMI-A3</option>
-                        <option value="maginMachine">Magic Manchine</option>
+                        <option value="openPrensa">Prensa termica LMI-A3</option>
+                        <option value="magicManchine">Magic Manchine</option>
                         <option>Carro</option>
                     </select>
                 </div>
 
                 <div class="form-group formSelect">
-                    <label for="prensa">Prenssa</label>
-                    <input type="text" class="form-control" id="prensa" placeholder="Prensa">
+                    <a type="button" class="btn btn-default"
+                        href="https://drive.google.com/file/d/18wIjef1KHZXzPqQ2cXrxAIkCRXwfK5n4/view" target="_blank">Abrir
+                        Guia da Prensa Termica (PDF)</a>
                 </div>
+
                 <div class="form-group selectManchine">
-                    <label for="maginMachine">Manchine</label>
-                    <input type="text" class="form-control" id="maginMachine" placeholder="maginMachine">
+                    <a type="button" data-toggle="modal" class="btn btn-default">Abrir
+                        Guia</a>
                 </div>
             </form>
 
 
-            <button class="btn btn-primary" type="button">
-                Confirmar
+            <button data-toggle="modal" data-target="#finalizarCliente" type="button" class="btn btn-primary">
+                Finalizar
             </button>
             </form>
         </div>
     </div>
-
+    <div class="modal fade" tabindex="-1" role="dialog" id="finalizarCliente">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Finalizado com sucesso!!!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Registro do cliente foram salva com Sucesso!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <script>
         function carregar(pagina) {
@@ -126,6 +175,7 @@
     </script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/painel.js"></script>
+
 </body>
 </body>
 
