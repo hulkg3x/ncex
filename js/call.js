@@ -1,3 +1,4 @@
+var clienteFinalizado;
 // Call 
 var callStatus = document.querySelector("#statusService");
 var callOn = document.querySelector(".atendimento");
@@ -7,6 +8,7 @@ var timeService = document.querySelector("#timeService");
 //Btn
 var btnLiberar = document.querySelector("#btn-liberar");
 var btnPausar = document.querySelector("#btn-pausar");
+var btnLigar = document.querySelector("#btn-ligar");
 
 var btnAtender = document.querySelector("#btn-atenderCliente");
 var btnDesligar = document.querySelector("#btn-desligarCliente");
@@ -37,6 +39,9 @@ btnDesligar.addEventListener('click', () => {
     FinalizarLigacao();
 });
 
+btnLigar.addEventListener('click', () =>{
+    ligarCliente();
+});
 
 // função para liberar o serviço e iniciar atendimentos
 function CallLivre() {
@@ -80,6 +85,15 @@ function callIniciada() {
     btnDesligar.disabled = false;
     callOn.classList.add('atendimentoOncliente');
     StartTime(true);
+}
+
+//funcao responsavel por ligar para o cliente
+
+function ligarCliente(){
+    callStatus.textContent = "Discando";
+    setTimeout(() => {
+        callIniciada();
+    }, 3000);
 }
 
 
