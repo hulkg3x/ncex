@@ -23,19 +23,25 @@
         <main>
             <p class="error">
                 <div id="loader"></div>
-            </p>
-            <div class="login-painel">
+             <div class="login-painel">
                 <h1>Painel de usuário</h1>
                 <form action="page/painel.html" method="POST" id="paienlusuario">
                     <p class="camp-login">
                         <label for="login">Login : </label>
-                        <input type="text" id="login" name="login" placeholder="Digite seu login">
+                        <input type="text" id="login" name="login" placeholder="Digite seu usuario">
                     </p>
                     <p class="camp-pass">
                         <label for="senha">Senha : </label>
                         <input type="password" id="senha" name="Senha" placeholder="Digite sua senha">
                     </p>
+                     <span>Lembrar Usuario</span><input type="checkbox">
+                    <br>
+                    <br>
                     <input type="submit" name="Login" value="Logar">
+                    <br>
+                    <br>
+                    <a href="#" style="text-decoration: none; color: #1b6d85;"  onclick="recupera()">Esqueci meu usuario</a>
+                    
                 </form>
 
             </div>

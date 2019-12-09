@@ -1,220 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/painel.css" rel="stylesheet">
-    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <title>Painel | NCEx</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/painel.css" rel="stylesheet">
+        <!----<link href="../css/contrasteAbia.css" rel="stylesheet">--->
+        <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+               <script src="../js/fonte.js"></script>
+        <script src="../js/aumentarfonte.js"></script>
+     
+        <title>Painel | NCEx</title>
+    </head>
 
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Painel NCEx</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Contraste</a></li>
-                    <li><a href="#">Zoom [+]</a></li>
-                    <li><a href="#">Zoom [-]</a></li>
-                    <li><a href="#contact">Guia de Pagina</a></li>
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about">Bem Vindo, Joel</a></li>
-                    <li><a type="button" data-toggle="modal" data-target="#logout" href="">Sair</a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </nav>
-
-    <!-- header site -->
-    <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <img class="img-fluid img-topo" src="../img/ncex_logo.png" alt="Logo NCEx Painel">
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Painel NCEx</a>
                 </div>
-                <div class="col-md-2">
-                    <div class="dropdown create">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expandes="true">
-                            Campanha de Marketing
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a onclick="carregar('pages/campanhaMagic.html')" type="button" data-toggle="modal"
-                                    data-target="#" href="#">MagicMachine</a></li>
-                        </ul>
-                    </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Contraste</a>
+                        </li>
+                        <li><a onClick="fonte('a');">A[+]</a></li><li><a>Tamanho</a></li><li><a onClick="fonte('d');">A[-]</a></li>                 
+                        <li id="txt-tamanho-texto">
+                        </li>
+                        <li><a href="#contact">Guia de Pagina</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">Bem Vindo, Joel</a></li>
+                        <li><a type="button" data-toggle="modal" data-target="#logout" href="">Sair</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-2">
-                    <div class="dropdown create">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expandes="true">
-                            Opções do Contact
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a type="button" data-toggle="modal" data-target="#" href="#"
-                                    id="btn-liberar">Liberar</a></li>
-                            <li><a type="button" data-toggle="modal" data-target="#" href="#"
-                                    id="btn-ligar">Ligar</a></li>
-                            <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-pausar">Pausar</a>
-                            </li>
-                            <li><a type="button" data-toggle="modal" data-target="#" href="#">Finalizar Serviço</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <!--/.nav-collapse -->
             </div>
-        </div>
-    </header>
+        </nav>
 
-    <section id="breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="active">DashBoard</li>
-            </ol>
-        </div>
-    </section>
-    <!-- painel esquerda -->
-
-    <section id="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="list-group">
-                        <a onclick="carregar('pages/home.html')" href="#" class="list-group-item active main-color-bg">
-                            <span class="glyphicon glyphicon-cog" aria-hidden="true"> Painel NCEx</span>
-                        </a>
-                        <a onclick="carregar('pages/protocolos.html')" href="#" class="list-group-item">
-                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Pesquisar Protocolo</span>
-                        </a>
-                        <a onclick="alert('Desativado temporariamente')" href="#" class="list-group-item">
-                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"> Editar Cliente</span>
-                        </a>
+        <!-- header site -->
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <img class="img-fluid img-topo" src="../img/ncex_logo.png" alt="Logo NCEx Painel">
                     </div>
-                    <div class="well">
-                        <h4>Contact Center</h4>
-                        <div class="atendimento">
-                            <p id="statusService">Finalizando</p>
-                            <p id="timeService">00:00</p>
-                            <button class="btn btn-default btn-atender" type="button" title="Atender"
-                                id="btn-atenderCliente" onclick="carregar('pages/cliente.html')">
-                                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    <div class="col-md-2">
+                        <div class="dropdown create">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expandes="true">
+                                Campanha de Marketing
+                                <span class="caret"></span>
                             </button>
-                            <button class="btn btn-default btn-atender" type="button" title="Desligar"
-                                id="btn-desligarCliente">
-                                <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a onclick="carregar('pages/campanhaMagic.html')" type="button" data-toggle="modal" data-target="#" href="#">MagicMachine</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="dropdown create">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expandes="true">
+                                Opções do Contact
+                                <span class="caret"></span>
                             </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-liberar">Liberar</a></li>
+                                <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-ligar">Ligar</a></li>
+                                <li><a type="button" data-toggle="modal" data-target="#" href="#" id="btn-pausar">Pausar</a>
+                                </li>
+                                <li><a type="button" data-toggle="modal" data-target="#" href="#">Finalizar Serviço</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <!-- Painel direito -->
-                <div class="col-md-9">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Home</h3>
-                        </div>
-                        <div class="panel-body">
-                            <h3><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Dicas :</h3>
-                            <p class="">Não esqueça sempre de verificar com o cliente suas duvidas</p>
-                            <p class="">Nunca deixe seu cliente com duvidas</p>
-                            <p class="">Sempre passe o numero de Protocolo</p>
+            </div>
+        </header>
 
-                            <h3><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Campanhas :</h3>
-                            <a type="button"
-                                href="https://drive.google.com/file/d/1uXaBOh_uBiXEEoWD8BvUiWIIn12qh137/view?usp=sharing"
-                                target="_blank" class="btn btn-primary" title="Campanha e Marketing">Abrir Script de
-                                campanha</a>
+        <section id="breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="active">DashBoard</li>
+                </ol>
+            </div>
+        </section>
+        <!-- painel esquerda -->
+
+        <section id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="list-group">
+                            <a onclick="carregar('pages/home.html')" href="#" class="list-group-item active main-color-bg">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"> Painel NCEx</span>
+                            </a>
+                            <a onclick="carregar('pages/protocolos.html')" href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Pesquisar Protocolo</span>
+                            </a>
+                            <a onclick="alert('Desativado temporariamente')" href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"> Editar Cliente</span>
+                            </a>
                         </div>
-                    </div>
-                    <!-- OUTRO PAINEL SE PRECISAR -->
-                    <div class="panel panel-default" id="conteudo">
-                        <div class="panel-heading">
-                            <h3 class="title-panel">Registros de Operações</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="col-md-4">
-                                <div class="well">
-                                    <h5>Chamadas Atendidas <span class="badge">20</span></h5>
-                                </div>
+                        <div class="well">
+                            <h4>Contact Center</h4>
+                            <div class="atendimento">
+                                <p id="statusService">Finalizando</p>
+                                <p id="timeService" >00:00</p>
+                                
+                                <button class="btn btn-default btn-atender" type="button" title="Atender" id="btn-atenderCliente" onclick="carregar('pages/cliente.html')">
+                                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                                </button>
+                                <button class="btn btn-default btn-atender" type="button" title="Desligar" id="btn-desligarCliente">
+                                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                                </button>
                             </div>
-                            <div class="col-md-4">
-                                <div class="well">
-                                    <h5>Campanha e Marketing</span></h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                            aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="60%">
-                                            <span class="sr-only">60% Complete</span>
-                                            <p>60% Efetuado</p>
+                        </div>
+                    </div>
+                    <!-- Painel direito -->
+                    <div class="col-md-9">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Home</h3>
+                            </div>
+                            <div class="panel-body">
+                                <h3><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Dicas :</h3>
+                                <p class="">Não esqueça sempre de verificar com o cliente suas duvidas</p>
+                                <p class="">Nunca deixe seu cliente com duvidas</p>
+                                <p class="">Sempre passe o numero de Protocolo</p>
+
+                                <h3><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Campanhas :</h3>
+                                <a type="button" href="https://drive.google.com/file/d/1uXaBOh_uBiXEEoWD8BvUiWIIn12qh137/view?usp=sharing" target="_blank" class="btn btn-primary" title="Campanha e Marketing">Abrir Script de
+                                    campanha</a>
+                            </div>
+                        </div>
+                        <!-- OUTRO PAINEL SE PRECISAR -->
+                        <div class="panel panel-default" id="conteudo">
+                            <div class="panel-heading">
+                                <h3 class="title-panel">Registros de Operações</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-4">
+                                    <div class="well">
+                                        <h5>Chamadas Atendidas <span class="badge">20</span></h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="well">
+                                        <h5>Campanha e Marketing</span>
+                                        </h5>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="60%">
+                                                <span class="sr-only">60% Complete</span>
+                                                <p>60% Efetuado</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="well">
-                                    <h5>Problemas Resolvidos <span class="badge">15</span></h5>
+                                <div class="col-md-4">
+                                    <div class="well">
+                                        <h5>Problemas Resolvidos <span class="badge">15</span></h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Modal Exit -->
-        <div class="modal fade" id="logout" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Sair do Painel NCEx</h4>
+            <!-- Modal Exit -->
+            <div class="modal fade" id="logout" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Sair do Painel NCEx</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Tem Certeza que deseja sair do Painel?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <button id="btn-logout" type="button" class="btn btn-primary">Deslogar</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <p>Tem Certeza que deseja sair do Painel?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        <button id="btn-logout" type="button" class="btn btn-primary">Deslogar</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
 
-    </section>
-    <footer id="footer">
-        <p>&copy; NCEx Copyright 2019</p>
-    </footer>
+        </section>
+        <footer id="footer">
+            <p>&copy; NCEx Copyright 2019</p>
+        </footer>
 
 
 
 
-    <!-- Bootstrap and jQuery -->
-    <script>
-        function carregar(pagina) {
-            $("#conteudo").load(pagina);
-        }
-    </script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/logout.js"></script>
-    <script src="../js/call.js"></script>
+        <!-- Bootstrap and jQuery -->
+        <script>
+            function carregar(pagina) {
+                $("#conteudo").load(pagina);
+            }
+        </script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/logout.js"></script>
+        <script src="../js/call.js"></script>
 
-</body>
+    </body>
 
 </html>

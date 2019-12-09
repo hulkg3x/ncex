@@ -24,7 +24,7 @@ body {
     color: black;
     width: 30%;
     height: 200px;
-    padding-bottom: 50px;
+    padding-bottom: 120px;
     display: block;
     transition: 1s;
     box-shadow: 1px 1px 5px #6E6E6E;
@@ -34,11 +34,11 @@ body {
 }
 .login-painel h1 {
     font-size: 30px;
-    color: #009e73;
+    color: #337ab7;
     padding-top: 20px;
 }
 .login-painel p {
-    color: #009e73;
+    color: #337ab7;
     font-weight: bold;
 }
 .login-painel:hover {
@@ -79,13 +79,13 @@ input[type=submit]{
     padding: 5px 20px;
     border: none;
     outline: none;
-    color: #009e73;
+    color: #337ab7;
     border-radius: 5px;
     font-size: 20px;
 }
 input[type=submit]:hover {
     color: whitesmoke;
-    background-color: #009e73;
+    background-color: #337ab7;
 }
 
 /* error de login estilo */
@@ -123,7 +123,7 @@ input[type=submit]:hover {
     background-color: #bbeebb;
     border-radius: 5px;
     font-size: 14px;
-    color: whitesmoke;
+    color: black;
     opacity: 1;
     transition: 0.5s;
 }
@@ -173,4 +173,5 @@ input[type=submit]:hover {
       padding-top: 20px;
       font-weight: bold;
       text-align: center;
+      color: #337ab7;
   }

@@ -3,7 +3,16 @@
 var selectPrenssa = document.querySelector(".formSelect");
 var selectManchine = document.querySelector(".selectManchine");
 
-function OptionSelect() {
+
+selectPrenssa.addEventListener('click', function () {
+    
+    console.log("teste");
+});
+
+
+/*
+ * function optionSelect() {
+    console.log("options");
     var options = document.querySelector("#optionSelect").value;
     if (options == "openPrensa") {
         selectPrenssa.classList.add('visibilityForm');
@@ -11,7 +20,8 @@ function OptionSelect() {
         selectPrenssa.classList.remove('visibilityForm');
     }
 
-    if(options == "magicManchine") {
+    if (options == "magicManchine") {
         selectManchine.classList.add('visibilityForm');
     }
 }
+ */

@@ -14,7 +14,7 @@ var senha = document.getElementById('senha');
 var error = document.querySelector(".error");
 document.getElementById("loader").style.display = "none";
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', function(event) {
 
     if (login.value == "") {
         error.textContent = 'Digite seu login'
@@ -24,24 +24,31 @@ form.addEventListener('submit', function (event) {
         error.classList.add("errorFadeIn");
     } else {
 
-        if (login.value != 'joel') {
+        if (login.value != 'admin') {
             error.textContent = 'login incorreto';
             error.classList.add("errorFadeIn");
-        } else if (senha.value != 1596325852) {
+        } else if (senha.value != "admin") {
             error.textContent = 'Senha Incorreta';
             error.classList.add("errorFadeIn");
         } else {
             error.textContent = 'Logado com sucesso...';
             error.classList.add("logadoComSucesso");
-            setTimeout(function(){
+            setTimeout(function() {
                 error.textContent = 'Aguarde Carregando';
                 document.getElementById("loader").style.display = "block";
             }, 2000)
 
-            setTimeout(function(){
+            setTimeout(function() {
                 window.location.href = "painel/index.html";
             }, 5000);
         }
     }
     event.preventDefault();
 });
+
+function recupera() {
+    var email = prompt('Digite seu email');
+    if (email) {
+        alert("Senha enviada para seu email");
+    }
+}

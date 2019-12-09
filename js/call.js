@@ -37,6 +37,7 @@ btnAtender.addEventListener('click', () => {
 // botao de finalizar ligação
 btnDesligar.addEventListener('click', () => {
     FinalizarLigacao();
+    clearInterval();
 });
 
 btnLigar.addEventListener('click', () =>{
@@ -108,13 +109,13 @@ function FinalizarLigacao() {
 }
 
 
-function StartTime(timeStart) {
-    var timeStart;;
+function StartTime(timeStart, pararTime) {
+    var timeStart;
     // Inicia o tempo com o cliente
     if (timeStart) {
         var hour = 00;
         var sec = 00;
-        setInterval(function () {
+        var contador = setInterval(function () {
             timeService.innerHTML = hour + " : " + sec;
             sec++;
             if (sec == 60) {
@@ -128,5 +129,5 @@ function StartTime(timeStart) {
     }
 }
 function StopTime(){
-    clearInterval();
+   clearInterval();
 }
