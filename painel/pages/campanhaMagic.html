@@ -87,7 +87,7 @@
                     <td style="text-align: center;"><input type="checkbox"></td>
                 </tr>
             </table>
-            <button class="btn btn-primary" type="button">
+            <button class="btn btn-primary" type="button" data-loading-text="Loading...">
                 Salvar
             </button>
         </div>
@@ -100,6 +100,13 @@
         function carregar(pagina) {
             $("#conteudo").load(pagina);
         }
+        
+  $('#myButton').on('click', function () {
+    var $btn = $(this).button('loading')
+    // business logic...
+    $btn.button('reset')
+  })
+        
     </script>
 </body>
 
