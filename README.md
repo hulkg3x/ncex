@@ -1,5 +1,5 @@
 # link : https://hulkg3x.github.io/ncex/
 
-### para logar use :
-### Login : joel
-### senha : 1596325852
+### para logar user :
+### Login : admin
+### senha : admin
