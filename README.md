@@ -1,4 +1,4 @@
-# link : https://hulkg3x.github.io/ncex/
+# link : https://joeyandrader.github.io/ncex/
 
 ### Dados login:
 ### Login : admin
